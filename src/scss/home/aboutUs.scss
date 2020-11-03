@@ -5,19 +5,26 @@
   color: $dark-grey-color;
   &__content {
     text-align: center;
-    padding: 80px 100px;
+    padding: 80px 50px;
+    width: 50%;
     &__title {
       font-weight: normal;
       font-size: 38px;
       margin: 20px 0;
     }
     &__text {
+      width: 700px;
       font-size: 30px;
-      margin: 50px 0;
+      margin: 0 auto;
+      padding: 50px;
+    }
+    .signature {
+      margin-left: 500px;
     }
   }
   &__img {
-    width: 55%;
+    width: 50%;
+    height: 935px;
     object-fit: cover;
   }
 }

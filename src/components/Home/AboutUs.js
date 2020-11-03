@@ -1,6 +1,6 @@
 import React from "react";
 import "./../../scss/home/aboutUs.scss";
-import foto from "../../assets/People.jpg";
+import photo from "../../assets/People.jpg";
 import decoration from "../../assets/Decoration.svg";
 import signature from "../../assets/Signature.svg";
 
@@ -15,9 +15,9 @@ const AboutUs = () => {
           quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
           turnip greens parsnip.
         </p>
-        <img src={signature} alt="signature" />
+        <img src={signature} alt="signature" className="signature" />
       </div>
-      <img src={foto} alt="foto" className="about__img" />
+      <img src={photo} alt="people" className="about__img" />
     </section>
   );
 };
