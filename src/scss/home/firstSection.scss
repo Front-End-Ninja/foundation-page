@@ -1,20 +1,24 @@
 @import "../settings/colors";
 
-.firstSection{
+.firstSection {
   display: flex;
-  justify-content: space-between;
-  background: transparent url('../../assets/3 Columns Background@2x.png') 0 0 no-repeat padding-box;
+  justify-content: center;
+  background: transparent url("../../assets/3 Columns Background@2x.png") 0 0
+    no-repeat padding-box;
   opacity: 1;
-  &__box{
-    width: 25%;
-    margin: 50px 80px;
+  &__box {
+    margin: 50px;
     text-align: center;
     color: $dark-green-color;
-    &__counter{
+    p {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    &__counter {
       font-size: 90px;
       font-weight: normal;
     }
-    &__title{
+    &__title {
       text-transform: uppercase;
       font-size: 18px;
       margin: 25px 0;

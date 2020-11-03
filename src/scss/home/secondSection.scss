@@ -1,0 +1,39 @@
+@import "./../settings/colors";
+
+.secondSection {
+  color: $dark-grey-color;
+  text-align: center;
+  padding: 50px 0;
+  &__title {
+    font-size: 38px;
+    font-weight: normal;
+  }
+  &__img {
+    margin: 30px 0;
+  }
+  &__content {
+    background-color: $main-color;
+    padding: 50px 250px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    &__box {
+      width: 180px;
+      &__title {
+        font-size: 18px;
+        font-weight: normal;
+        margin: 20px 0;
+        padding: 20px 0;
+        border-bottom: 1px solid $light-grey-color;
+      }
+    }
+  }
+  &__link {
+    cursor: pointer;
+    width: 280px;
+    font-size: 36px;
+    text-transform: uppercase;
+    border: 0.75px solid $dark-grey-color;
+    padding: 25px;
+  }
+}
