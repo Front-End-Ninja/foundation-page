@@ -1,0 +1,28 @@
+@import './../settings/colors';
+
+.nav{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 40px 100px;
+  color:  $dark-grey-color;
+  z-index: 5;
+  &__list{
+    display: flex;
+    &__item{
+      font-size: 24px;
+      height: 80px;
+      width: 150px;
+      cursor: pointer;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      margin: 40px 20px;
+      &:hover{
+        border: 0.75px solid $dark-grey-color;
+      }
+    }
+  }
+}

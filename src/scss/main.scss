@@ -1,0 +1,8 @@
+@import "settings/reset";
+@import "./settings/fonts";
+@import "settings/colors";
+
+body{
+  font-family: $base-font;
+  overflow-x: hidden;
+}
