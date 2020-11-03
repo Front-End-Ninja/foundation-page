@@ -1,0 +1,64 @@
+@import "../settings/colors";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  &__box {
+    display: flex;
+    &__layout {
+      display: flex;
+      flex-direction: column;
+      margin: 10px 20px;
+      &__label {
+        font-weight: bold;
+      }
+      &__input {
+        border: none;
+        border-bottom: 2px solid $light-grey-color;
+        background-color: rgba(255, 255, 255, 0.4);
+        margin: 5px 0;
+        height: 35px;
+        width: 200px;
+        padding: 5px 10px;
+      }
+    }
+  }
+  &__area {
+    width: 100%;
+    margin-left: 20px;
+    &__label {
+      font-weight: bold;
+    }
+    &__textarea {
+      background-color: rgba(255, 255, 255, 0.2);
+      height: 120px;
+      width: 100%;
+      margin: 20px auto;
+      border: none;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      border-bottom: 2px solid $light-grey-color;
+      resize: none;
+      padding: 5px;
+      text-align: left;
+      white-space: inherit;
+    }
+  }
+  &__submit {
+    cursor: pointer;
+    font-size: 18px;
+    color: $light-grey-color;
+    width: 120px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid $light-grey-color;
+  }
+  &__send {
+    color: $light-orange-color;
+    font-size: 18px;
+    &-hide {
+      display: none;
+    }
+  }
+}
