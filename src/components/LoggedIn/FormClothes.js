@@ -371,7 +371,7 @@ const FormClothes = () => {
                 className="formClothes__thirdStep__form__input"
                 onChange={(e) => whoHelp(e)}
               />
-              osobą starszym
+              osobom starszym
               <span className="formClothes__thirdStep__form__checkbox"></span>
             </label>
           </div>
@@ -410,7 +410,7 @@ const FormClothes = () => {
       >
         <h1 className="formClothes__step">Krok {step}/5</h1>
         <h1 className="formClothes__fourthStep__title">
-          Podaj adres oraz termin odbioru rzecz przez kuriera
+          Podaj adres oraz termin odbioru rzeczy przez kuriera
         </h1>
 
         <form className="formClothes__fourthStep__form">

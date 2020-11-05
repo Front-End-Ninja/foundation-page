@@ -32,7 +32,7 @@ const Register = () => {
           let errorCode = error.code;
           let errorMessage = error.message;
           console.log(errorCode + " " + errorMessage);
-          console.log("zarejstrowano");
+          console.log("zarejestrowano");
         })
         .then(() => {
           setEmail("");
@@ -46,7 +46,7 @@ const Register = () => {
     <>
       <Navigation />
       <main className="register">
-        <h1 className="register__title">Załóż kotno</h1>
+        <h1 className="register__title">Załóż konto</h1>
         <img
           src={decoration}
           alt="decoration"
