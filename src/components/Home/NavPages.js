@@ -36,7 +36,7 @@ const NavPages = () => {
           Zaloguj
         </Link>
         <Link activeClass="active" className="navPages" to="/register">
-          Zarejstruj
+          Zarejestruj
         </Link>
       </>
     );
