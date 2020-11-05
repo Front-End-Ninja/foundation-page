@@ -1,0 +1,59 @@
+@import "../settings/colors";
+
+.giveClothes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  color: $dark-grey-color;
+  background-image: url(../../assets/Header-Form-Background@2x.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 80%;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 2;
+  }
+  &__content {
+    z-index: 3;
+    text-align: center;
+    &__title {
+      font-size: 38px;
+      font-weight: normal;
+      margin: 20px 40px;
+    }
+    &__decoration {
+      margin: 20px 0;
+    }
+    &__steps {
+      display: flex;
+      justify-content: center;
+      &__box {
+        width: 100px;
+        height: 100px;
+        margin: 50px 10px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          transform: rotate(45deg);
+          border: 0.75px solid $dark-grey-color;
+        }
+      }
+    }
+  }
+}

@@ -18,7 +18,7 @@ const Form = () => {
     <form className="form">
       <div className="form__box">
         <div className="form__box__layout">
-          <label className="form__box__layout__label">
+          <label htmlFor="name" className="form__box__layout__label">
             Wpisz swoję imię
           </label>
           <input
@@ -30,7 +30,7 @@ const Form = () => {
           />
         </div>
         <div className="form__box__layout">
-          <label className="form__box__layout__label">
+          <label htmlFor="email" className="form__box__layout__label">
             Wpisz swój email
           </label>
           <input
@@ -43,19 +43,19 @@ const Form = () => {
         </div>
       </div>
       <div className="form__area">
-        <label className="form__area__label">
+        <label htmlFor="textArea" className="form__area__label">
           Wpisz swoją wiadomość{" "}
         </label>
         <textarea
-    onSubmit={(e) => setMsg(e.target.value)}
-    className="form__area__textarea"
-    id="textArea"
-    placeholder="Lorem ipsum dolor sit amet, consectetur
+          onSubmit={(e) => setMsg(e.target.value)}
+          className="form__area__textarea"
+          id="textArea"
+          placeholder="Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat."
-    />
+        />
       </div>
       <p className={send ? "form__send" : "form__send-hide"}>
         Wiadomość wysłana

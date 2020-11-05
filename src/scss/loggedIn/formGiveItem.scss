@@ -1,0 +1,241 @@
+@import "../settings/colors";
+
+.formClothes {
+  width: 100vh;
+  height: 85vh;
+  position: relative;
+  padding: 80px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: url("../../assets/Background-Form.jpg");
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  &__button {
+    color: $dark-grey-color;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    border: 0.75px solid $dark-grey-color;
+    padding: 10px;
+    margin: 30px 20px;
+  }
+  &__step {
+    font-size: 24px;
+    color: $dark-grey-color;
+    font-weight: normal;
+  }
+  &__firstStep {
+    margin: 80px 0;
+    width: 550px;
+    &-hide {
+      display: none;
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      &__input {
+        display: none;
+      }
+      &__label {
+        cursor: pointer;
+        margin: 20px 0;
+        position: relative;
+      }
+      &__checkbox {
+        width: 22px;
+        height: 22px;
+        border: 0.75px solid $dark-grey-color;
+        position: absolute;
+        top: 0;
+        left: -29px;
+        &::after {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 20px;
+        }
+      }
+      &__input:checked + &__checkbox::after {
+        background: $light-orange-color;
+      }
+    }
+  }
+  &__secondStep {
+    margin: 80px 0;
+    width: 550px;
+    &-hide {
+      display: none;
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__form {
+      margin: 50px 0;
+      &__select {
+        width: 150px;
+        height: 40px;
+        font-size: 24px;
+        margin: 0 50px;
+
+        appearance: none;
+        outline: 0;
+        border: 0.75px solid $dark-grey-color;
+        padding: 0 20px;
+        cursor: pointer;
+        background-color: transparent;
+        &::-ms-expand {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__thirdStep {
+    margin: 80px 0;
+    width: 550px;
+    &-hide {
+      display: none;
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      margin: 20px 0;
+      &__select {
+        width: 170px;
+        height: 40px;
+        font-size: 24px;
+        margin: 20px 50px;
+
+        appearance: none;
+        outline: 0;
+        border: 0.75px solid $dark-grey-color;
+        padding: 0 20px;
+        cursor: pointer;
+        background-color: transparent;
+        &::-ms-expand {
+          display: none;
+        }
+      }
+      &__box {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 0;
+      }
+      &__radio {
+        border: 0.75px solid $dark-grey-color;
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+        background-color: transparent;
+        position: relative;
+      }
+      &__input {
+        display: none;
+      }
+      &__checkbox {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &__input:checked + &__checkbox {
+        background-color: $light-orange-color;
+        z-index: -1;
+      }
+      &__organization {
+        padding: 10px 5px;
+        height: 30px;
+        width: 400px;
+        background-color: transparent;
+        border: 0.75px solid $dark-grey-color;
+        outline: 0;
+      }
+    }
+  }
+  &__fourthStep {
+    margin: 80px 0;
+    width: 750px;
+    &-hide {
+      display: none;
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__form {
+      display: flex;
+      align-items: flex-start;
+      &__box {
+        margin: 40px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      &__label {
+        margin: 10px 15px;
+      }
+      &__input {
+        margin: 0 10px;
+        padding: 10px 5px;
+        height: 30px;
+        width: 200px;
+        background-color: transparent;
+        border: 0.75px solid $dark-grey-color;
+        outline: 0;
+      }
+    }
+  }
+  &__fifthStep {
+    margin: 80px 0;
+    width: 600px;
+    &-hide {
+      display: none;
+    }
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      &__box {
+        margin: 35px 0;
+        &__text {
+          margin: 30px 0;
+        }
+      }
+    }
+  }
+  &__lastStep {
+    margin: 80px 0;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-hide {
+      display: none;
+    }
+    &__img {
+      margin: 30px 0;
+    }
+  }
+}

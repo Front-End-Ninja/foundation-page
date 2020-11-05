@@ -1,0 +1,14 @@
+@import "../settings/colors";
+
+.giveClothesLink {
+  text-decoration: none;
+  color: $dark-grey-color;
+  cursor: pointer;
+  width: 280px;
+  text-align: center;
+  font-size: 36px;
+  text-transform: uppercase;
+  border: 0.75px solid $dark-grey-color;
+  padding: 25px;
+  margin: 0 20px;
+}

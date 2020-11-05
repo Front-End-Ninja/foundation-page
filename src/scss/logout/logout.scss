@@ -1,0 +1,25 @@
+@import "./../settings/colors";
+
+.logout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: $dark-grey-color;
+  &__ {
+    font-size: 40px;
+  }
+  &__img {
+    margin: 30px 0;
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    &:hover {
+      outline: 0.75px solid $dark-grey-color;
+    }
+  }
+}

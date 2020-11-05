@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-scroll";
 import "../../scss/navigation/navigation.scss";
+import NavPages from "./NavPages";
 
 const Navigation = () => {
   return (
     <nav className="nav">
-      <div></div>
+      <div>
+        <NavPages />
+      </div>
       <ul className="nav__list">
         <Link
           className="nav__list__item"
