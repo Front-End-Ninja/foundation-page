@@ -18,10 +18,10 @@ const NavPages = () => {
     return (
       <>
         <p className="hello">Cześć {login}</p>
-        <Link to="/logout" activeClass="active" className="navPages">
+        <Link to="/logout" activeclass="active" className="navPages">
           Wyloguj
         </Link>
-        <Link activeClass="active" className="navPages" to="/">
+        <Link activeclass="active" className="navPages" to="/">
           Główna
         </Link>
       </>
@@ -29,14 +29,14 @@ const NavPages = () => {
   } else {
     return (
       <>
-        <Link activeClass="active" className="navPages" to="/">
+        <Link activeclass="active" className="navPages" to="/">
           Główna
         </Link>
-        <Link activeClass="active" className="navPages" to="/login">
+        <Link activeclass="active" className="navPages" to="/login">
           Zaloguj
         </Link>
-        <Link activeClass="active" className="navPages" to="/register">
-          Zarejestruj
+        <Link activeclass="active" className="create" to="/register">
+          Załóż konto
         </Link>
       </>
     );

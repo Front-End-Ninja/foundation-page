@@ -2,10 +2,8 @@
 
 .main {
   color: $dark-grey-color;
-  background: url("../../assets/Home-Hero-Image.jpg");
-  background-position: -350px;
+  background: url("../../assets/Home-Hero-Image.jpg") no-repeat -600px;
   background-size: contain;
-  background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,13 +14,16 @@
     flex-direction: column;
   }
   &__content {
+    @media only screen and (max-width: 2000px) {
+      padding: 0 100px;
+    }
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 250px 50px 50px;
+    padding: 0 350px 50px 50px;
     &__text {
-      font-size: 32px;
+      font-size: 38px;
       font-weight: 400;
       text-align: center;
       margin: 10px 0;

@@ -11,8 +11,8 @@ const Navigation = () => {
       </div>
       <ul className="nav__list">
         <Link
-          className="nav__list__item"
-          activeClass="active"
+          className="nav__list__start"
+          activeclass="active"
           to="firstSection"
           smooth={true}
           offset={0}
@@ -22,7 +22,7 @@ const Navigation = () => {
         </Link>
         <Link
           className="nav__list__item"
-          activeClass="active"
+          activeclass="active"
           to="secondSection"
           smooth={true}
           offset={0}
@@ -32,7 +32,7 @@ const Navigation = () => {
         </Link>
         <Link
           className="nav__list__item"
-          activeClass="active"
+          activeclass="active"
           to="about"
           smooth={true}
           offset={0}
@@ -42,7 +42,7 @@ const Navigation = () => {
         </Link>
         <Link
           className="nav__list__item"
-          activeClass="active"
+          activeclass="active"
           to="whoHelp"
           smooth={true}
           offset={20}
@@ -52,7 +52,7 @@ const Navigation = () => {
         </Link>
         <Link
           className="nav__list__item"
-          activeClass="active"
+          activeclass="active"
           to="footer"
           smooth={true}
           offset={0}

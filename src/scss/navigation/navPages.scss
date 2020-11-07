@@ -11,6 +11,15 @@
     outline: 0.75px solid $light-orange-color;
   }
 }
+.create {
+  position: relative;
+  right: 50px;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  color: $dark-grey-color;
+  outline: 0.75px solid $light-orange-color;
+}
 .hello {
   margin: 0 80px;
   display: inline;

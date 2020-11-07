@@ -1,118 +1,116 @@
 import React, { useState } from "react";
-import "../../scss/register/register.scss";
-
+import "../../scss/register";
 import Navigation from "../Home/Navigation";
 import decoration from "../../assets/Decoration.svg";
-import { MIN_LENGTH } from "./Validation";
-
 import firebase from "../../firebase";
+import { Link, useHistory } from "react-router-dom";
+import { useForm } from "react-hook-form";
+
 
 const Register = () => {
+  const { register, handleSubmit, setError, errors, watch } = useForm();
   const [email, setEmail] = useState("");
-  const [newPassword, setNewPassword] = useState("");
+  const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
+  const history = useHistory();
 
-  const [errorEmail, setErrorEmail] = useState(false);
-  const [errorPassword, setErrorPassword] = useState(false);
-
-  const onSubmit = (event) => {
-    event.preventDefault();
-
-    if (email.length < MIN_LENGTH) {
-      setErrorEmail(true);
-    } else if (newPassword !== repeatPassword && newPassword <= MIN_LENGTH) {
-      setErrorPassword(true);
-    } else {
-      setErrorPassword(false);
+  const onSubmit = () => {
 
       firebase
-        .auth()
-        .createUserWithEmailAndPassword(email, newPassword)
-        .catch(function (error) {
-          let errorCode = error.code;
-          let errorMessage = error.message;
-          console.log(errorCode + " " + errorMessage);
-          console.log("zarejestrowano");
-        })
-        .then(() => {
-          setEmail("");
-          setNewPassword("");
-          setRepeatPassword("");
-        });
-    }
-  };
-
+          .auth()
+          .createUserWithEmailAndPassword(email, password)
+          .then(() => {
+            history.push('/')
+          })
+          .then(() => {
+            setEmail("");
+            setPassword("");
+            setRepeatPassword("");
+          })
+          .catch(function (err) {
+            console.log(err);
+            setError('email', {
+              type: 'manual',
+              message: err.message
+            })
+            setError('password', {
+              type: 'manual',
+              message: err.message
+            })
+            setError('repeatPassword', {
+              type: 'manual',
+              message: err.message
+            })
+          });
+    };
   return (
-    <>
-      <Navigation />
-      <main className="register">
-        <h1 className="register__title">Załóż konto</h1>
-        <img
-          src={decoration}
-          alt="decoration"
-          className="register__decoration"
-        />
-
-        <form className="register__form" onSubmit={onSubmit}>
-          <p
-            className={
-              errorEmail
-                ? "register__form__validation-error"
-                : "register__form__validation"
-            }
-          >
-            Nie poprawny email
-          </p>
-
-          <label htmlFor="email" className="register__form__label">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="register__form__input"
-            value={email}
-            onChange={(e) => setEmail(e.currentTarget.value)}
+      <>
+        <Navigation />
+        <main className="register">
+          <h1 className="register__title">Załóż konto</h1>
+          <img
+              src={decoration}
+              alt="decoration"
+              className="register__decoration"
           />
-
-          <p
-            className={
-              errorPassword
-                ? "register__form__validation-error"
-                : "register__form__validation"
-            }
-          >
-            Nie poprawne hasło
-          </p>
-
-          <label htmlFor="password" className="register__form__label">
-            Hasło
-          </label>
-          <input
-            type="password"
-            id="password"
-            className="register__form__input"
-            value={newPassword}
-            onChange={(e) => setNewPassword(e.currentTarget.value)}
-          />
-
-          <label htmlFor="repeatPassword" className="register__form__label">
-            Powtórz hasło
-          </label>
-          <input
-            type="password"
-            id="repeatPassword"
-            className="register__form__input"
-            value={repeatPassword}
-            onChange={(e) => setRepeatPassword(e.currentTarget.value)}
-          />
-
-          <button type="submit" className="register__form__button">
-            Załóż konto
-          </button>
-        </form>
-      </main>
-    </>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="register__form">
+              <label htmlFor="email" className="register__form__label">
+                Email
+              </label>
+              {errors.email?.type === "required" && "email is required"}
+              {errors.email?.type === "manual" && errors.email.message}
+              <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  ref={register({ required: true})}
+                  className="register__form__input"
+                  value={email}
+                  onChange={(e) => setEmail(e.currentTarget.value)}
+              />
+              <label htmlFor="password" className="register__form__label">
+                Hasło
+              </label>
+              {errors.password?.type === "required" && "password is required!" }
+              {errors.password?.type === "minLength" && "minimum 6 letters" }
+              <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  ref={register({ required: true, minLength: 6})}
+                  className="register__form__input"
+                  value={password}
+                  onChange={(e) => setPassword(e.currentTarget.value)}
+              />
+              <label htmlFor="repeatPassword" className="register__form__label">
+                Powtórz hasło
+              </label>
+              {errors.repeatPassword?.type === "validate" && "incorrect password, password must be the same!"}
+              {errors.repeatPassword?.type === "required" && "password is required!"}
+              <input
+                  type="password"
+                  id="repeatPassword"
+                  name="repeatPassword"
+                  ref={
+                    register({
+                      required: true, minLength: 6,
+                    validate: (value) => value === watch('password')
+                  })}
+                  className="register__form__input"
+                  value={repeatPassword}
+                  onChange={(e) => setRepeatPassword(e.currentTarget.value)}
+              />
+            </div>
+            <Link activeclass="active" className="register__form__login" to="/login">
+              Zaloguj się
+            </Link>
+            <button type="submit" className="register__form__button">
+              Załóż konto
+            </button>
+          </form>
+        </main>
+      </>
   );
 };
 

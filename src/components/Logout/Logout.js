@@ -1,5 +1,5 @@
 import React from "react";
-import "../../scss/logout/logout.scss";
+import "../../scss/logout";
 import firebase from "../../firebase";
 import decoration from "../../assets/Decoration.svg";
 

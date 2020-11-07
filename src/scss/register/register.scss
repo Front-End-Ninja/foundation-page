@@ -15,7 +15,7 @@
   &__form {
     width: 30vw;
     padding: 30px 40px;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
     display: flex;
     flex-direction: column;
     background-color: $main-color;
@@ -33,21 +33,29 @@
       outline: 0;
     }
     &__button {
-      font-size: 18px;
-      cursor: pointer;
-      height: 30px;
-      width: 150px;
-      margin: auto;
-      color: $dark-grey-color;
-      background-color: $main-color;
-      border: none;
-      outline: 0;
+      text-decoration: none;
+      padding: 10px 15px;
+      margin: 0 220px 0 220px;
+      font-size: 32px;
+      font-weight: lighter;
+      background: white;
+      border: 1px solid $dark-grey-color;
+      &:hover {
+        outline: 0.75px solid $dark-grey-color;
+      }
     }
-    &__validation {
-      display: none;
-      &-error {
-        display: block;
-        color: red;
+    &__login {
+      @media only screen and (max-width: 1900px) {
+        margin: 0 150px 0 150px;
+      }
+      text-decoration: none;
+      padding: 10px 15px;
+      margin: 0 220px 0 220px;
+      font-size: 32px;
+      font-weight: lighter;
+      color: $dark-grey-color;
+      &:hover {
+        outline: 0.75px solid $dark-grey-color;
       }
     }
   }

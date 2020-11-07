@@ -4,15 +4,16 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin: 50px 80px 0;
-  padding-right: 20px;
+  margin: 50px;
+  padding: 0 50px 0 0;
   color: $dark-grey-color;
   z-index: 5;
   &__list {
     display: flex;
     margin-top: 30px;
-    &__item {
-      font-size: 13px;
+    &__start {
+      margin-right: 5px;
+      font-size: 20px;
       height: 80px;
       width: 150px;
       cursor: pointer;
@@ -20,8 +21,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      outline: 0.75px solid $dark-grey-color;
+    }
+    &__item {
+      margin-right: 5px;
+      font-size: 20px;
+      height: 80px;
+      width: 220px;
+      cursor: pointer;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       &:hover {
-        border: 0.75px solid $dark-grey-color;
+        outline: 0.75px solid $dark-grey-color;
       }
     }
   }
