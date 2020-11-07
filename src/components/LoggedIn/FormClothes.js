@@ -150,7 +150,7 @@ const FormClothes = () => {
               onChange={(e) => ChangeHandler(e)}
             />
             ubrania, które nadają się do ponownego urzycia
-            <span className="formClothes__firstStep__form__checkbox"></span>
+            <span className="formClothes__firstStep__form__checkbox"/>
           </label>
 
           <label
@@ -166,7 +166,7 @@ const FormClothes = () => {
               onChange={(e) => ChangeHandler(e)}
             />
             ubrania, do wyrzucenia
-            <span className="formClothes__firstStep__form__checkbox"></span>
+            <span className="formClothes__firstStep__form__checkbox"/>
           </label>
 
           <label
@@ -182,7 +182,7 @@ const FormClothes = () => {
               onChange={(e) => ChangeHandler(e)}
             />
             zabawki
-            <span className="formClothes__firstStep__form__checkbox"></span>
+            <span className="formClothes__firstStep__form__checkbox"/>
           </label>
 
           <label
@@ -198,7 +198,7 @@ const FormClothes = () => {
               onChange={(e) => ChangeHandler(e)}
             />
             książki
-            <span className="formClothes__firstStep__form__checkbox"></span>
+            <span className="formClothes__firstStep__form__checkbox"/>
           </label>
 
           <label
@@ -214,7 +214,7 @@ const FormClothes = () => {
               onChange={(e) => ChangeHandler(e)}
             />
             Inne
-            <span className="formClothes__firstStep__form__checkbox"></span>
+            <span className="formClothes__firstStep__form__checkbox"/>
           </label>
 
           <button
@@ -312,7 +312,7 @@ const FormClothes = () => {
                 onChange={(e) => whoHelp(e)}
               />
               dzieciom
-              <span className="formClothes__thirdStep__form__checkbox"></span>
+              <span className="formClothes__thirdStep__form__checkbox"/>
             </label>
 
             <label
@@ -327,7 +327,7 @@ const FormClothes = () => {
                 onChange={(e) => whoHelp(e)}
               />
               samotnym matkom
-              <span className="formClothes__thirdStep__form__checkbox"></span>
+              <span className="formClothes__thirdStep__form__checkbox"/>
             </label>
 
             <label
@@ -342,7 +342,7 @@ const FormClothes = () => {
                 onChange={(e) => whoHelp(e)}
               />
               bezdomnym
-              <span className="formClothes__thirdStep__form__checkbox"></span>
+              <span className="formClothes__thirdStep__form__checkbox"/>
             </label>
 
             <label
@@ -357,11 +357,11 @@ const FormClothes = () => {
                 onChange={(e) => whoHelp(e)}
               />
               niepełnosprawnym
-              <span className="formClothes__thirdStep__form__checkbox"></span>
+              <span className="formClothes__thirdStep__form__checkbox"/>
             </label>
 
             <label
-              for="forWho4"
+              htmlFor="forWho4"
               className="formClothes__thirdStep__form__radio"
             >
               <input
@@ -372,7 +372,7 @@ const FormClothes = () => {
                 onChange={(e) => whoHelp(e)}
               />
               osobom starszym
-              <span className="formClothes__thirdStep__form__checkbox"></span>
+              <span className="formClothes__thirdStep__form__checkbox"/>
             </label>
           </div>
 

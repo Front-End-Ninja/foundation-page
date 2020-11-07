@@ -8,6 +8,9 @@
   padding: 0 50px 0 0;
   color: $dark-grey-color;
   z-index: 5;
+  @media only screen and (min-width: 1366px) and (max-width: 2000px){
+    margin: 15px;
+  }
   &__list {
     display: flex;
     margin-top: 30px;
@@ -22,6 +25,10 @@
       align-items: center;
       justify-content: center;
       outline: 0.75px solid $dark-grey-color;
+      @media only screen and (min-width: 1366px) and (max-width: 2000px){
+        font-size: 14px;
+        width: 150px;
+      }
     }
     &__item {
       margin-right: 5px;
@@ -35,6 +42,10 @@
       justify-content: center;
       &:hover {
         outline: 0.75px solid $dark-grey-color;
+      }
+      @media only screen and (min-width: 1366px) and (max-width: 2000px){
+        font-size: 14px;
+        width: 150px;
       }
     }
   }

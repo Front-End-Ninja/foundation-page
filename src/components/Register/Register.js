@@ -64,6 +64,7 @@ const Register = () => {
                   type="email"
                   id="email"
                   name="email"
+                  placeholder="np. Łukasz@example.com"
                   ref={register({ required: true})}
                   className="register__form__input"
                   value={email}
@@ -78,6 +79,7 @@ const Register = () => {
                   type="password"
                   id="password"
                   name="password"
+                  placeholder="password minimum 6 znaków"
                   ref={register({ required: true, minLength: 6})}
                   className="register__form__input"
                   value={password}
@@ -92,6 +94,7 @@ const Register = () => {
                   type="password"
                   id="repeatPassword"
                   name="repeatPassword"
+                  placeholder="confirm password"
                   ref={
                     register({
                       required: true, minLength: 6,

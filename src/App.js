@@ -12,10 +12,10 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <Route path="/logout" component={Logout} />
-        <Route path="/give-clothes" component={GiveClothes} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/logout" component={Logout} />
+        <Route exact path="/give-clothes" component={GiveClothes} />
       </Switch>
     </BrowserRouter>
   );

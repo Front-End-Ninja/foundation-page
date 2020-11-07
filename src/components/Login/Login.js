@@ -34,7 +34,7 @@ const Login = () => {
     };
     return (
         <>
-            <Navigation />
+            <Navigation/>
             <main className="login">
                 <h1 className="login__title">Zaloguj</h1>
                 <img src={decoration} alt="decoration" className="login__decoration" />
@@ -48,6 +48,7 @@ const Login = () => {
                         type="email"
                         id="email"
                         name="email"
+                        placeholder="np. Łukasz@example.com"
                         ref={register({ required: true})}
                         className="login__form__input"
                         value={email}
@@ -63,6 +64,7 @@ const Login = () => {
                         type="password"
                         id="password"
                         name="password"
+                        placeholder="password min. 6 znaków"
                         ref={register({ required: true, minLength: 6 })}
                         className="login__form__input"
                         value={password}

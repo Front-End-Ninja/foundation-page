@@ -25,12 +25,14 @@
     }
     &__input {
       background-color: $main-color;
-      padding: 0 10px;
-      margin: 30px 0;
-      height: 40px;
+      padding: 10px 10px;
+      margin: 20px 0;
       border: none;
       border-bottom: 1px solid $light-grey-color;
       outline: 0;
+      @media only screen and (min-width: 1366px) and (max-width: 2000px){
+        height: 10px;
+      }
     }
     &__btn {
       text-decoration: none;
@@ -43,10 +45,13 @@
       &:hover {
         outline: 0.75px solid $dark-grey-color;
       }
+      @media only screen and (max-width: 1366px) {
+        margin: 0 100px 0 100px;
+      }
     }
     &__reg {
-      @media only screen and (max-width: 1900px) {
-        margin: 0 150px 0 150px;
+      @media only screen and (max-width: 1366px) {
+        margin: 0 100px 0 100px;
       }
       text-decoration: none;
       padding: 10px 15px;
@@ -58,6 +63,5 @@
         outline: 0.75px solid $dark-grey-color;
       }
     }
-
   }
 }

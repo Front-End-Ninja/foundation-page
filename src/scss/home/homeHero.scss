@@ -8,7 +8,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  &__header {
+  @media only screen and (min-width: 1366px) and (max-width: 2000px) {
+    background: url("../../assets/Home-Hero-Image.jpg") no-repeat -500px;
+    background-size: contain;
+  }
+    &__header {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
