@@ -21,6 +21,7 @@
         height: 35px;
         width: 200px;
         padding: 5px 10px;
+        outline: 0;
       }
     }
   }
@@ -36,6 +37,7 @@
       width: 100%;
       margin: 20px auto;
       border: none;
+      outline: 0;
       overflow-x: hidden;
       overflow-y: scroll;
       border-bottom: 2px solid $light-grey-color;
@@ -53,6 +55,9 @@
     height: 50px;
     background-color: rgba(255, 255, 255, 0.4);
     border: 2px solid $light-grey-color;
+    &:hover {
+      outline: 2px solid $light-grey-color;
+    }
   }
   &__send {
     color: $light-orange-color;

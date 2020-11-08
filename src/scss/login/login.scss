@@ -30,7 +30,7 @@
       border: none;
       border-bottom: 1px solid $light-grey-color;
       outline: 0;
-      @media only screen and (min-width: 1366px) and (max-width: 2000px){
+      @media only screen and (min-width: 1000px) and (max-width: 1900px) {
         height: 10px;
       }
     }
@@ -50,7 +50,7 @@
       }
     }
     &__reg {
-      @media only screen and (max-width: 1366px) {
+      @media only screen and (min-width: 1000px) and (max-width: 1900px) {
         margin: 0 100px 0 100px;
       }
       text-decoration: none;

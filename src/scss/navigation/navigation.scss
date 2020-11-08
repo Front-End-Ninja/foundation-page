@@ -8,7 +8,7 @@
   padding: 0 50px 0 0;
   color: $dark-grey-color;
   z-index: 5;
-  @media only screen and (min-width: 1366px) and (max-width: 2000px){
+  @media only screen and (min-width: 1000px) and (max-width: 1900px) {
     margin: 15px;
   }
   &__list {
@@ -25,7 +25,7 @@
       align-items: center;
       justify-content: center;
       outline: 0.75px solid $dark-grey-color;
-      @media only screen and (min-width: 1366px) and (max-width: 2000px){
+      @media only screen and (min-width: 1000px) and (max-width: 1900px) {
         font-size: 14px;
         width: 150px;
       }
@@ -43,7 +43,7 @@
       &:hover {
         outline: 0.75px solid $dark-grey-color;
       }
-      @media only screen and (min-width: 1366px) and (max-width: 2000px){
+      @media only screen and (min-width: 1000px) and (max-width: 1900px) {
         font-size: 14px;
         width: 150px;
       }

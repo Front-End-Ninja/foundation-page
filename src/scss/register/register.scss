@@ -30,7 +30,7 @@
       border: none;
       border-bottom: 1px solid $light-grey-color;
       outline: 0;
-      @media only screen and (min-width: 1366px) and (max-width: 2000px){
+      @media only screen and (min-width: 1000px) and (max-width: 1900px) {
       height: 10px;
       }
     }
@@ -45,12 +45,12 @@
       &:hover {
         outline: 0.75px solid $dark-grey-color;
       }
-      @media only screen and (min-width: 1366px) and (max-width: 2000px){
+      @media only screen and (min-width: 1000px) and (max-width: 1900px) {
         margin: 0 100px 0 100px;
       }
     }
     &__login {
-      @media only screen and (min-width: 1366px) and (max-width: 2000px){
+      @media only screen and (min-width: 1000px) and (max-width: 1900px) {
         margin: 0 150px 0 150px;
       }
       text-decoration: none;

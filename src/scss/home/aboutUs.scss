@@ -8,7 +8,7 @@
     text-align: center;
     padding: 160px 50px;
     width: 50%;
-    @media only screen and (min-width: 1366px) and (max-width: 2000px){
+    @media only screen and (min-width: 1000px) and (max-width: 1900px) {
       padding: 80px 5px;
     }
     &__title {
@@ -24,7 +24,7 @@
     }
     .signature {
       margin-left: 500px;
-      @media only screen and (min-width: 1366px) and (max-width: 2000px){
+      @media only screen and (min-width: 1000px) and (max-width: 1900px) {
         margin-left: 400px;
       }
     }

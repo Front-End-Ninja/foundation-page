@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  @media only screen and (min-width: 1366px) and (max-width: 2000px) {
+  @media only screen and (min-width: 1000px) and (max-width: 1900px) {
     background: url("../../assets/Home-Hero-Image.jpg") no-repeat -500px;
     background-size: contain;
   }
@@ -18,8 +18,8 @@
     flex-direction: column;
   }
   &__content {
-    @media only screen and (max-width: 2000px) {
-      padding: 0 100px;
+    @media only screen and (min-width: 1000px) and (max-width: 1900px) {
+      padding: 0 50px;
     }
     margin-top: 100px;
     display: flex;

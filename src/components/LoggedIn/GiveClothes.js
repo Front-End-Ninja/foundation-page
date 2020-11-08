@@ -23,7 +23,7 @@ const GiveClothes = () => {
             alt="decoration"
             className="giveClothes__content__decoration"
           />
-          <h3 className="giveClothes__content__title">
+          <h3 className="giveClothes__content__title2">
             Wystarczą 4 proste kroki
           </h3>
 
