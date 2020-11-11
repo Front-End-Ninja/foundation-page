@@ -13,11 +13,16 @@
   }
   &__content {
     background-color: $main-color;
-    padding: 50px 250px;
+    padding: 50px 500px;
     margin-bottom: 100px;
     display: flex;
     justify-content: space-between;
-    &__box {
+    @media only screen and (min-width: 1000px) and (max-width: 1900px) {
+      padding: 50px 300px;
+
+    }
+
+      &__box {
       width: 180px;
       &__title {
         font-size: 18px;
@@ -25,6 +30,19 @@
         margin: 20px 0;
         padding: 20px 0;
         border-bottom: 1px solid $light-grey-color;
+      }
+      &__title3 {
+        position: relative;
+        top: -26px;
+      font-size: 18px;
+      font-weight: normal;
+        margin: 20px 0;
+        padding: 20px 0;
+        border-bottom: 1px solid $light-grey-color;
+    }
+      .third {
+        position: relative;
+        top: -26px;
       }
     }
   }

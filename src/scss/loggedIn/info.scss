@@ -1,8 +1,12 @@
 @import "../settings/colors";
 
 .info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
   background: $light-orange-color;
-  padding: 55px 80px;
+  padding: 15px 80px;
+  height: 15vh;
   &__title {
     font-size: 36px;
   }

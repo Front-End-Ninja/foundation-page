@@ -27,10 +27,10 @@ const SecondSection = () => {
         </div>
         <div className="secondSection__content__box">
           <img src={icon3} alt="icon" />
-          <h2 className="secondSection__content__box__title">
+          <h2 className="secondSection__content__box__title3">
             Zdecyduj komu chcesz pomóc
           </h2>
-          <p>wybierz zaufane miejsce</p>
+          <p className="third">wybierz zaufane miejsce</p>
         </div>
         <div className="secondSection__content__box">
           <img src={icon4} alt="icon" />

@@ -1,4 +1,13 @@
 @mixin content () {
   position: relative;
-  top: 100px;
+  top: -120px;
+}
+
+@mixin button () {
+  position: relative;
+  top: -80px;
+}
+@mixin formFix() {
+  width: 800px;
+
 }

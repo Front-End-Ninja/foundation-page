@@ -1,4 +1,5 @@
 @import "../settings/colors";
+@import "../settings/mixins";
 
 .formClothes {
   width: 100vh;
@@ -26,17 +27,23 @@
     text-transform: uppercase;
     border: 0.75px solid $dark-grey-color;
     padding: 10px;
-    margin: 30px 20px;
+    margin: 100px 20px;
+    @media only screen and (min-width: 1000px) and (max-width: 1900px) {
+      @include button;
+    }
   }
   &__step {
+    margin: 80px 0;
     font-size: 24px;
     color: $dark-grey-color;
     font-weight: normal;
   }
   &__firstStep {
-    margin: 80px 0;
     width: 550px;
-    &-hide {
+    @media only screen and (min-width: 1000px) and (max-width: 1900px) {
+      @include content;
+    }
+      &-hide {
       display: none;
     }
     &__title {
@@ -59,7 +66,7 @@
         border: 0.75px solid $dark-grey-color;
         position: absolute;
         top: 0;
-        left: -29px;
+        margin: 0 10px;
         &::after {
           content: "";
           display: block;
@@ -73,8 +80,11 @@
     }
   }
   &__secondStep {
-    margin: 80px 0;
+    margin: 50px 0;
     width: 550px;
+    @media only screen and (min-width: 1000px) and (max-width: 1900px) {
+      @include content;
+    }
     &-hide {
       display: none;
     }
@@ -82,7 +92,7 @@
       font-size: 36px;
     }
     &__form {
-      margin: 50px 0;
+      margin: 20px 0 250px 0;
       &__select {
         width: 150px;
         height: 40px;
@@ -102,8 +112,12 @@
   }
 
   &__thirdStep {
-    margin: 80px 0;
-    width: 550px;
+    margin: 50px 0;
+    width: 600px;
+    @media only screen and (min-width: 1000px) and (max-width: 1900px) {
+      position: relative;
+      top: -110px;
+    }
     &-hide {
       display: none;
     }
@@ -118,8 +132,6 @@
         width: 170px;
         height: 40px;
         font-size: 24px;
-        margin: 20px 50px;
-
         appearance: none;
         outline: 0;
         border: 0.75px solid $dark-grey-color;
@@ -132,13 +144,16 @@
       }
       &__box {
         display: flex;
+        justify-content: stretch;
+        flex-direction: row;
+        align-items: center;
         flex-wrap: wrap;
         margin: 20px 0;
       }
       &__radio {
         border: 0.75px solid $dark-grey-color;
         padding: 10px 20px;
-        margin: 10px;
+        margin: 0 20px 20px 0;
         cursor: pointer;
         background-color: transparent;
         position: relative;
@@ -166,16 +181,27 @@
       &__organization {
         padding: 10px 5px;
         height: 30px;
-        width: 400px;
+        width: 485px;
         background-color: transparent;
         border: 0.75px solid $dark-grey-color;
         outline: 0;
       }
     }
   }
+  h2 {
+    padding-right: 150px;
+  }
   &__fourthStep {
-    margin: 80px 0;
-    width: 750px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    @media only screen and (min-width: 1000px) and (max-width: 1900px) {
+      position: relative;
+      top: -150px;
+      @include formFix;
+    }
     &-hide {
       display: none;
     }
@@ -185,15 +211,17 @@
     &__form {
       display: flex;
       align-items: flex-start;
+
       &__box {
-        margin: 40px 0;
+        margin: 40px 0 -70px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        justify-content: space-around;
+        align-items: flex-end;
       }
       &__label {
         margin: 10px 15px;
+        padding-right: 120px;
       }
       &__input {
         margin: 0 10px;
@@ -205,10 +233,18 @@
         outline: 0;
       }
     }
+    .btn__container {
+      margin-top: 50px;
+    }
   }
   &__fifthStep {
-    margin: 80px 0;
+    margin: 50px 0;
     width: 600px;
+    @media only screen and (min-width: 1000px) and (max-width: 1900px) {
+      position: relative;
+      top: -150px;
+      @include formFix;
+    }
     &-hide {
       display: none;
     }

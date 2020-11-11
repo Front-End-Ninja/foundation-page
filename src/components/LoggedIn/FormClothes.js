@@ -478,19 +478,22 @@ const FormClothes = () => {
             </label>
           </div>
         </form>
+        <div className="btn__container">
+          <button
+              onClick={(event) => prevStep(event)}
+              className="formClothes__button"
+          >
+            Wstecz
+          </button>
+          <button
+              onClick={(event) => nextStep(event)}
+              className="formClothes__button"
+          >
+            Dalej
+          </button>
+        </div>
 
-        <button
-          onClick={(event) => prevStep(event)}
-          className="formClothes__button"
-        >
-          Wstecz
-        </button>
-        <button
-          onClick={(event) => nextStep(event)}
-          className="formClothes__button"
-        >
-          Dalej
-        </button>
+
       </div>
 
       <div
