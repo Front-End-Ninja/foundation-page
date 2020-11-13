@@ -1,6 +1,21 @@
 @import "../settings/colors";
 @import "../settings/mixins";
 
+.info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background: $light-orange-color;
+  padding: 15px 80px;
+  height: 15vh;
+  &__title {
+    font-size: 36px;
+  }
+  &__text {
+    font-size: 16px;
+  }
+}
+
 .formClothes {
   width: 100vh;
   height: 85vh;
@@ -27,13 +42,13 @@
     text-transform: uppercase;
     border: 0.75px solid $dark-grey-color;
     padding: 10px;
-    margin: 100px 20px;
-    @media only screen and (min-width: 1000px) and (max-width: 1900px) {
+    margin: 180px 20px;
+    @media only screen and (min-width: 1000px) and (max-width: 1950px) {
       @include button;
     }
   }
   &__step {
-    margin: 80px 0;
+    margin: 50px 0;
     font-size: 24px;
     color: $dark-grey-color;
     font-weight: normal;
@@ -43,7 +58,7 @@
     @media only screen and (min-width: 1000px) and (max-width: 1900px) {
       @include content;
     }
-      &-hide {
+    &-hide {
       display: none;
     }
     &__title {
@@ -199,7 +214,7 @@
     flex-direction: column;
     @media only screen and (min-width: 1000px) and (max-width: 1900px) {
       position: relative;
-      top: -150px;
+      top: -110px;
       @include formFix;
     }
     &-hide {
@@ -242,8 +257,12 @@
     width: 600px;
     @media only screen and (min-width: 1000px) and (max-width: 1900px) {
       position: relative;
-      top: -150px;
+      top: -120px;
       @include formFix;
+    }
+    @media only screen and (min-width: 1900px) and (max-width: 2200px) {
+      position: relative;
+      top: -100px;
     }
     &-hide {
       display: none;
@@ -252,9 +271,9 @@
       display: flex;
       justify-content: space-between;
       &__box {
-        margin: 35px 0;
+        margin: 10px 0;
         &__text {
-          margin: 30px 0;
+          margin: 10px 0;
         }
       }
     }
@@ -262,6 +281,7 @@
   &__lastStep {
     margin: 80px 0;
     width: 450px;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -273,4 +293,24 @@
       margin: 30px 0;
     }
   }
+}
+.icons__step {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  img {
+    margin-right: 10px;
+  }
+}
+.box1 {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  align-items: center;
+}
+.box2 {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  align-items: center;
 }

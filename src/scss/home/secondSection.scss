@@ -19,10 +19,9 @@
     justify-content: space-between;
     @media only screen and (min-width: 1000px) and (max-width: 1900px) {
       padding: 50px 300px;
-
     }
 
-      &__box {
+    &__box {
       width: 180px;
       &__title {
         font-size: 18px;
@@ -33,13 +32,13 @@
       }
       &__title3 {
         position: relative;
-        top: -26px;
-      font-size: 18px;
-      font-weight: normal;
+        top: -25px;
+        font-size: 18px;
+        font-weight: normal;
         margin: 20px 0;
         padding: 20px 0;
         border-bottom: 1px solid $light-grey-color;
-    }
+      }
       .third {
         position: relative;
         top: -26px;

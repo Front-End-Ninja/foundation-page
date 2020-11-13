@@ -4,7 +4,6 @@ import "../../scss/loggedIn/giveItems.scss";
 import decoration from "../../assets/Decoration.svg";
 
 import Navigation from "../Home/Navigation";
-import Info from "./Info";
 import Message from "../Home/Footer";
 import FormClothes from "./FormClothes";
 
@@ -50,7 +49,6 @@ const GiveClothes = () => {
           </div>
         </div>
       </main>
-      <Info />
       <FormClothes />
       <Message />
     </>

@@ -1,5 +1,6 @@
 import "./scss/main.scss";
 import React from "react";
+import Routes from "./components/Routes";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import Login from "./components/Login";
@@ -11,11 +12,11 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/logout" component={Logout} />
-        <Route exact path="/give-clothes" component={GiveClothes} />
+        <Route exact path={Routes.HOME} component={Home} />
+        <Route path={Routes.LOG_IN} component={Login} />
+        <Route path={Routes.REGISTER} component={Register} />
+        <Route path={Routes.LOG_OUT} component={Logout} />
+        <Route path={Routes.FORM} component={GiveClothes} />
       </Switch>
     </BrowserRouter>
   );
