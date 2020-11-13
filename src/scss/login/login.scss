@@ -35,18 +35,19 @@
       }
     }
     &__btn {
+      @media only screen and (min-width: 1000px) and (max-width: 1900px) {
+        margin: 0 100px 0 100px;
+      }
       text-decoration: none;
       padding: 10px 15px;
       margin: 0 220px 0 220px;
       font-size: 32px;
       font-weight: lighter;
-      background: white;
+      background-color: white;
+      color: $dark-grey-color;
       border: 1px solid $dark-grey-color;
       &:hover {
         outline: 0.75px solid $dark-grey-color;
-      }
-      @media only screen and (max-width: 1366px) {
-        margin: 0 100px 0 100px;
       }
     }
     &__reg {
