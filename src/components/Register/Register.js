@@ -79,7 +79,7 @@ const Register = () => {
                   type="password"
                   id="password"
                   name="password"
-                  placeholder="password minimum 6 znaków"
+                  placeholder="min. 6 znaków"
                   ref={register({ required: true, minLength: 6})}
                   className="register__form__input"
                   value={password}
@@ -94,7 +94,7 @@ const Register = () => {
                   type="password"
                   id="repeatPassword"
                   name="repeatPassword"
-                  placeholder="confirm password"
+                  placeholder="podaj jeszcze raz swoje hasło"
                   ref={
                     register({
                       required: true, minLength: 6,

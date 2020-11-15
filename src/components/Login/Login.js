@@ -63,7 +63,7 @@ const Login = () => {
               type="password"
               id="password"
               name="password"
-              placeholder="password min. 6 znaków"
+              placeholder="min. 6 znaków"
               ref={register({ required: true, minLength: 6 })}
               className="login__form__input"
               value={password}

@@ -4,7 +4,7 @@ import "../../scss/loggedIn/formGiveItem.scss";
 import icon1 from "../../assets/Icon-1.svg";
 import icon4 from "../../assets/Icon-4.svg";
 
-const FormClothes = (props) => {
+const FormClothes = () => {
   const [step, setStep] = useState(1);
   const greetings = {
     1: "Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać",
@@ -43,9 +43,8 @@ const FormClothes = (props) => {
   });
 
   const ChangeHandler = (e) => {
-    e.preventDefault();
     setFirstStep(e.currentTarget.value);
-  };
+  }
 
   const selectHandler = (e) => {
     e.preventDefault();
@@ -58,7 +57,6 @@ const FormClothes = (props) => {
   };
 
   const whoHelp = (e) => {
-    e.preventDefault();
     setWhoHelps(e.currentTarget.value);
   };
 
@@ -107,7 +105,7 @@ const FormClothes = (props) => {
       firstStep: firstStep,
       select: select,
       location: location,
-      forWho: whoHelps,
+      whoHelp: whoHelps,
       organization: organizations,
       street: streets,
       city: town,
@@ -523,7 +521,7 @@ const FormClothes = (props) => {
             <div className="box1">
               <img src={icon1} alt="icon" style={{ height: "35px" }} />
               <p>
-                {formAnswer.select} {formAnswer.firstStep}
+                {formAnswer.select} {formAnswer.firstStep},{formAnswer.whoHelp.toString()}
               </p>
             </div>
             <div className="box2">
