@@ -68,7 +68,7 @@ const Register = () => {
                   ref={register({ required: true})}
                   className="register__form__input"
                   value={email}
-                  onChange={(e) => setEmail(e.currentTarget.value)}
+                  onChange={(e) => setEmail(e.target.value)}
               />
               <label htmlFor="password" className="register__form__label">
                 Hasło
@@ -83,7 +83,7 @@ const Register = () => {
                   ref={register({ required: true, minLength: 6})}
                   className="register__form__input"
                   value={password}
-                  onChange={(e) => setPassword(e.currentTarget.value)}
+                  onChange={(e) => setPassword(e.target.value)}
               />
               <label htmlFor="repeatPassword" className="register__form__label">
                 Powtórz hasło
@@ -102,7 +102,7 @@ const Register = () => {
                   })}
                   className="register__form__input"
                   value={repeatPassword}
-                  onChange={(e) => setRepeatPassword(e.currentTarget.value)}
+                  onChange={(e) => setRepeatPassword(e.target.value)}
               />
             </div>
             <Link activeclass="active" className="register__form__login" to="/login">
